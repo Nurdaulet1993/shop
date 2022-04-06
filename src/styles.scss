@@ -4,12 +4,21 @@
 @import "src/themes/default-theme";
 @import "src/themes/dark-theme";
 
+@import "app-theme";
+
+@mixin custom-components-theme($theme) {
+  @include app-component-theme($theme);
+}
+
+
 .DEFAULT-THEME {
   @include mat.all-component-themes($default-theme);
+  @include custom-components-theme($default-theme);
 }
 
 .DARK-THEME {
   @include mat.all-component-themes($dark-theme);
+  @include custom-components-theme($default-theme);
 }
 
 

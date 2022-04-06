@@ -1,0 +1,20 @@
+@use "sass:math";
+@import "mixins";
+
+[class*="hover-"] {
+  transition: all 200ms ease!important;
+}
+
+.hover-shadow-1 {
+  &:hover {
+     @include box-shadow-1;
+  }
+}
+
+.hover-translate-y-n10 {
+  &:hover {
+    transform: translateY(math.div(-10, 16) * 1rem);
+  }
+}
+
+

@@ -1,0 +1,24 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+@mixin app-component-theme($theme) {
+  $color-config: mat.get-color-config($theme);
+
+  $primary-clr: mat.get-color-from-palette(map-get($color-config, 'primary'));
+  $accent-clr: mat.get-color-from-palette(map-get($color-config, 'accent'));
+  $warn-clr: mat.get-color-from-palette(map-get($color-config, 'warn'));
+
+  .theme-wrapper {
+    display: block;
+    background-color: $warn-clr;
+  }
+
+  .example {
+    background-color: $warn-clr;
+  }
+
+  .link {
+    color: $primary-clr;
+    text-decoration: none;
+  }
+}

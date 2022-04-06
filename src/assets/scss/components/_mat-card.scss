@@ -1,0 +1,7 @@
+@use "sass:math";
+
+.mat-card {
+  border: 1px solid #eff2f7;
+  border-radius: math.div(4, 16) * 1rem;
+  box-shadow: unset!important;
+}
