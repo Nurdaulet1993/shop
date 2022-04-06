@@ -1,5 +1,9 @@
-@import "src/assets/scss/abstarcts/mixins";
+@use "sass:math";
+@import "mixins";
 
 .example {
+  margin: 20px;
   padding: 30px;
+  @include box-shadow-1;
+  font-size: math.div(12, 16) * 1rem;
 }

@@ -10,7 +10,6 @@
   @include app-component-theme($theme);
 }
 
-
 .DEFAULT-THEME {
   @include mat.all-component-themes($default-theme);
   @include custom-components-theme($default-theme);
@@ -21,6 +20,7 @@
   @include custom-components-theme($default-theme);
 }
 
+.LIGHT-THEME {}
 
 
 
