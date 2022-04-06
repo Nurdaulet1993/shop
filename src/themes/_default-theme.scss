@@ -1,0 +1,13 @@
+@use '@angular/material' as mat;
+
+$default-primary: mat.define-palette(mat.$cyan-palette);
+$default-accent: mat.define-palette(mat.$amber-palette, A200, A100, A400);
+$default-warn: mat.define-palette(mat.$red-palette);
+
+$default-theme: mat.define-light-theme((
+  color: (
+    primary: $default-primary,
+    accent: $default-accent,
+    warn: $default-warn,
+  )
+));
