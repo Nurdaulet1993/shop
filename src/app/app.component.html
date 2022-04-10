@@ -1,22 +1,26 @@
 <div class="theme-wrapper DEFAULT-THEME">
-  <mat-toolbar color="primary">Hello</mat-toolbar>
+  <ng-template [ngIf]="false">
+    <mat-toolbar color="primary">Hello</mat-toolbar>
 
-  <h1>Hello my dear friend let mi</h1>
-  <button mat-flat-button color="primary">Hello</button>
-  <button mat-flat-button color="accent">Hello</button>
-  <button mat-flat-button color="warn">Hello</button>
+    <h1>Hello my dear friend let mi</h1>
+    <button mat-flat-button color="primary">Hello</button>
+    <button mat-flat-button color="accent">Hello</button>
+    <button mat-flat-button color="warn">Hello</button>
 
-  <a href="#" class="link">Link</a>
+    <a href="#" class="link">Link</a>
 
-  <div class="example">
-    Example
-  </div>
+    <div class="example">
+      Example
+    </div>
 
-  <div style="padding: 30px">
-    <mat-card class="hover-translate-y-n10 hover-shadow-1">Card text</mat-card>
-  </div>
-  <div style="padding: 30px">
-    <mat-card class="hover-shadow-1">Card text</mat-card>
-  </div>
+    <div style="padding: 30px">
+      <mat-card class="hover-translate-y-n10 hover-shadow-1">Card text</mat-card>
+    </div>
+    <div style="padding: 30px">
+      <mat-card class="hover-shadow-1">Card text</mat-card>
+    </div>
+  </ng-template>
+
+  <router-outlet></router-outlet>
 </div>
 
