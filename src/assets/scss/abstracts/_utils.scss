@@ -1,6 +1,8 @@
 @use "sass:math";
 @import "mixins";
 
+$name: 45px;
+
 [class*="hover-"] {
   transition: all 200ms ease!important;
 }
