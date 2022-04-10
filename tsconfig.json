@@ -8,6 +8,8 @@
       "@env": ["./src/environments/environment.ts"],
       "@shared/*": ["./src/app/shared/*"],
       "@core/*": ["./src/app/core/*"],
+      "@layouts/*": ["./src/app/layouts/*"],
+      "@app/*": ["./src/app/*"]
     },
     "forceConsistentCasingInFileNames": true,
     "strict": true,
