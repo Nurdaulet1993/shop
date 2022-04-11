@@ -1,4 +1,11 @@
 @use "sass:math";
+@import "variables";
+
+@mixin container {
+  max-width: math.div(1200, 16) * 1rem;
+  margin: 0 auto;
+  padding: 0 $space;
+}
 
 @mixin box-shadow-1 {
   box-shadow: 0 1rem 3rem rgb(31 45 61 / 13%)!important;
