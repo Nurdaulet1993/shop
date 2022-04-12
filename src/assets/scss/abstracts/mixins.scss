@@ -7,6 +7,10 @@
   padding: 0 $space;
 }
 
+@mixin container-fluid {
+  padding: 0 $space * 3;
+}
+
 @mixin box-shadow-1 {
   box-shadow: 0 1rem 3rem rgb(31 45 61 / 13%)!important;
 }

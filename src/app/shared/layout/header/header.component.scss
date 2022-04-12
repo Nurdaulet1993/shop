@@ -2,13 +2,44 @@
 @import "mixins";
 @import "variables";
 
+:host ::ng-deep .header .mat-form-field {
+  &-wrapper {
+    padding: unset;
+    margin: unset;
+  }
+}
+
 .header {
-  padding: $space 0;
+  padding: math.div(10, 16) * 1rem 0;
   border-bottom: 1px solid #eff2f7;
+  @include box-shadow-1;
+
+  &__container {
+    display: flex;
+    gap: $space;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
 
 
   &__logo {
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: inherit;
+
+    img {
+      display: block;
+      height: math.div(30, 16) * 1rem;
+      width: auto;
+    }
   }
 }
+
+.search {
+  flex-grow: 1;
+}
+

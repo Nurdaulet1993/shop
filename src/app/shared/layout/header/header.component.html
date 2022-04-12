@@ -1,5 +1,20 @@
 <header class="header">
-  <div class="container">
-    <a routerLink="/" class="header__logo">Vape Shop</a>
+  <div class="container-fluid header__container">
+    <a routerLink="/" class="header__logo">
+      <img src="assets/img/logo.svg" alt="logotype">
+    </a>
+    <nav>
+      <button mat-button>Категории</button>
+    </nav>
+
+    <mat-form-field appearance="outline" class="search">
+      <mat-label>Ищите что угодно</mat-label>
+      <input matInput>
+      <mat-icon matSuffix>search</mat-icon>
+    </mat-form-field>
+
+    <button mat-stroked-button>Войти</button>
+    <button mat-flat-button color="primary">Регистрация</button>
+
   </div>
 </header>
