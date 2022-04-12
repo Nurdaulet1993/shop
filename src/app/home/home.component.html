@@ -1,5 +1,9 @@
 <div class="container">
-  <p>home works!</p>
+  <ul *ngIf="goods$ | async as goods">
+    <li *ngFor="let good of goods; let i = index">
+      {{ i }} <b>{{ good.name }}</b> <span> {{ good.price }} $</span> count: {{ good.count }} id: {{ good.id }}
+    </li>
+  </ul>
 </div>
 
 

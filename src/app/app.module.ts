@@ -4,8 +4,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SharedModule } from "@shared/shared.module";
 import { AppRoutingModule } from "./app-routing.module";
 import { CustomerDefaultModule } from "@layouts/customer-default/customer-default.module";
+import { AngularFireModule } from "@angular/fire/compat";
+import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
+import { environment } from "@env";
 
 import { AppComponent } from './app.component';
+
 
 @NgModule({
   declarations: [
@@ -16,7 +20,9 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     SharedModule,
     CustomerDefaultModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
