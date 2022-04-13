@@ -2,6 +2,13 @@
 @import "mixins";
 @import "variables";
 
+:host {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
 :host ::ng-deep .header .mat-form-field {
   &-wrapper {
     padding: unset;
@@ -12,6 +19,7 @@
 .header {
   padding: math.div(10, 16) * 1rem 0;
   border-bottom: 1px solid #eff2f7;
+  background-color: #fff;
   @include box-shadow-1;
 
   &__container {
