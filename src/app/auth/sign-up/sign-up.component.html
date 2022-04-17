@@ -1,1 +1,20 @@
-<p>sign-up works!</p>
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>Зарегистрируйтесь и начните <br> обучение!</mat-card-title>
+  </mat-card-header>
+  <form [formGroup]="form" (ngSubmit)="onSignUp()">
+    <mat-form-field appearance="outline">
+      <mat-label>Полное имя</mat-label>
+      <input matInput formControlName="fullName">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Адрес электронной почты</mat-label>
+      <input matInput type="email" formControlName="email">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Пароль</mat-label>
+      <input matInput type="password" formControlName="password">
+    </mat-form-field>
+    <button mat-raised-button color="primary">Зарегистрироваться</button>
+  </form>
+</mat-card>

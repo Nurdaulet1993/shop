@@ -1,17 +1,20 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
-
-
+import { SharedModule } from "@shared/shared.module";
+import { AuthRoutingModule } from "@app/auth/auth-routing.module";
+import { GoogleSignInDirective } from './directives/google-sign-in.directive';
+import { FacebookSignInDirective } from './directives/facebook-sign-in.directive';
 
 @NgModule({
   declarations: [
-    SignInComponent,
-    SignUpComponent
+    AuthRoutingModule.components,
+    GoogleSignInDirective,
+    FacebookSignInDirective,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SharedModule,
+    AuthRoutingModule
   ]
 })
 export class AuthModule { }

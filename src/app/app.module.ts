@@ -6,6 +6,7 @@ import { AppRoutingModule } from "./app-routing.module";
 import { CustomerDefaultModule } from "@layouts/customer-default/customer-default.module";
 import { AngularFireModule } from "@angular/fire/compat";
 import { AngularFirestoreModule } from "@angular/fire/compat/firestore";
+import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { environment } from "@env";
 
 import { AppComponent } from './app.component';
@@ -22,7 +23,8 @@ import { AppComponent } from './app.component';
     CustomerDefaultModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   providers: [],
   bootstrap: [AppComponent]

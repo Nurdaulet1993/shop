@@ -1,1 +1,27 @@
-<p>sign-in works!</p>
+<mat-card class="card">
+  <ng-container *ngIf="!user">
+    <button style="margin-bottom: 15px" mat-raised-button appGoogleSignIn>Sign in with Google</button>
+    <button style="margin-bottom: 15px" mat-raised-button appFacebookSignIn>Sign in with Facebook</button>
+  </ng-container>
+
+  <div *ngIf="user" style="margin-bottom: 15px">
+    <button mat-raised-button (click)="logout()">Log out</button>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSignIn()">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" formControlName="email">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password">
+    </mat-form-field>
+    <button mat-raised-button color="primary">Sign IN</button>
+  </form>
+  <ng-template [ngIf]="user">
+    <p> {{ user.displayName }}</p>
+    <p>Email: {{ user.email }}</p>
+    <img [src]="user.photoURL" alt="avatar">
+  </ng-template>
+</mat-card>
